@@ -4,6 +4,7 @@ namespace VivaYasu\Int2Eng;
 
 class Int2Eng
 {
+    /** @var $num_eng array  */
     private $num_eng = [
         '0' => 'zero',
         '1' => 'one',
@@ -35,7 +36,10 @@ class Int2Eng
         '90' => 'ninety'
     ];
 
+    /** @var $int int integer before convert */
     private $int;
+
+    /** @var $eng string number written in English */
     private $eng;
 
     /**
@@ -48,11 +52,20 @@ class Int2Eng
         $this->eng = $this->get_number($int);
     }
 
+    /**
+     * eng getter
+     *
+     * @return string
+     */
     public function get_eng()
     {
         return $this->eng;
     }
 
+    /**
+     * @param $num int
+     * @return string
+     */
     private function get_number($num)
     {
         if (strlen($num) == 1) {
@@ -67,6 +80,10 @@ class Int2Eng
         return $result;
     }
 
+    /**
+     * @param $num int
+     * @return string
+     */
     private function get_two_digits($num)
     {
         $first_digit = substr($num, 0, 1);
@@ -83,6 +100,10 @@ class Int2Eng
         return $result;
     }
 
+    /**
+     * @param $num int
+     * @return string
+     */
     private function get_three_digits($num)
     {
         $first_digit = substr($num, 0, 1);
@@ -99,6 +120,10 @@ class Int2Eng
         return $result;
     }
 
+    /**
+     * @param $num int
+     * @return string
+     */
     private function get_four_digits($num)
     {
         $first_digit = substr($num, 0, 1);
