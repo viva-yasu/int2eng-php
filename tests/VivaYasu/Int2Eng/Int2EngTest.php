@@ -11,7 +11,7 @@ class Int2EngTest extends \PHPUnit_Framework_TestCase
         $test_engs = ['zero', 'nine', 'fifteen', 'forty nine', 'seventy two', 'one hundred and two', 'three hundred and thirty six', 'seven hundred and sixty nine', 'eleven hundred and ninety'];
 
         $i = 0;
-        foreach($test_engs as $t) {
+        foreach ($test_engs as $t) {
             $int2eng = new Int2Eng($test_integers[$i]);
             $this->assertEquals($t, $int2eng->get_eng());
             $i++;
