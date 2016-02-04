@@ -47,7 +47,6 @@ crashlytics.properties
 crashlytics-build.properties
 
 # for my lib
-index.php
 vendor
 composer.lock
 composer.phar
